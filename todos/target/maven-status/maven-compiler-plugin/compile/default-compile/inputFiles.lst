@@ -1,2 +1,4 @@
-/home/divya/repos/oop/todo-spring/todos/src/main/java/org/pragna/TodoController.java
-/home/divya/repos/oop/todo-spring/todos/src/main/java/org/pragna/todos/controller/TodoApp.java
+/home/divya/repos/oop/todo-spring/todos/src/main/java/org/pragna/todos/TodoApp.java
+/home/divya/repos/oop/todo-spring/todos/src/main/java/org/pragna/todos/controller/TodoController.java
+/home/divya/repos/oop/todo-spring/todos/src/main/java/org/pragna/todos/model/Todo.java
+/home/divya/repos/oop/todo-spring/todos/src/main/java/org/pragna/todos/service/TodoService.java

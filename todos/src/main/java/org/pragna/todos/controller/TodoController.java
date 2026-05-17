@@ -10,32 +10,35 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api/todos")
 public class TodoController {
     private final TodoService todoService;
 
     public TodoController(TodoService todoService) {
         this.todoService = todoService;
     }
-   
-    @GetMapping({"/"})
-    public List<org.pragna.todos.model.Todo> getTodos() {
-      return todoService.getAllTodos();
+
+    @GetMapping
+    public List<Todo> getTodos() {
+        return todoService.getAllTodos();
     }
 
-    @PostMapping({"/add"})
+    @PostMapping
     public void addTodo(@RequestBody Todo todo) {
         todoService.addTodo(todo);
-        
     }
-    @PutMapping({"/update/{id}"})
-    public void updateTodo(@PathVariable int id, @RequestBody Todo todo) {
+
+    @PutMapping("/{id}")
+    public void updateTodo(@PathVariable long id, @RequestBody Todo todo) {
         todoService.updateTodo(id, todo);
     }
-    @DeleteMapping({"/delete/{id}"})
-    public void deleteTodo(@PathVariable int id) {
+
+    @DeleteMapping("/{id}")
+    public void deleteTodo(@PathVariable long id) {
         todoService.deleteTodo(id);
     }
 }

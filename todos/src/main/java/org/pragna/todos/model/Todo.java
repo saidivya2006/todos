@@ -1,7 +1,8 @@
 package org.pragna.todos.model;
 
 public class Todo {
-    private int id;
+
+    private long id;
     private String title;
     private String description;
     private boolean completed;
@@ -9,18 +10,18 @@ public class Todo {
     public Todo() {
     }
 
-    public Todo(int id, String title, String description, boolean completed) {
+    public Todo(long id, String title, String description, boolean completed) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.completed = completed;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -47,5 +48,5 @@ public class Todo {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
-
 }
+
