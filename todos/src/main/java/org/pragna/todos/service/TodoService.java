@@ -20,7 +20,7 @@ public List<Todo> getAllTodos() {
         todos.add(todo);
     }
 
-    public void updateTodo(int id, Todo updatedTodo) {
+    public void updateTodo(long id, Todo updatedTodo) {
         for (Todo todo:todos){
             if (todo.getId() == id) {
                 int index = todos.indexOf(todo);
@@ -30,7 +30,7 @@ public List<Todo> getAllTodos() {
         }
     }
 
-    public void deleteTodo(int id) {
+    public void deleteTodo(long id) {
        
         
         todos.removeIf(todo -> todo.getId() == id);

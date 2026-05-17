@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="app-container">
+
+    <header>
+      <h1>Todo App</h1>
+      <p>Manage your tasks with a simple Spring Boot frontend.</p>
+    </header>
+
+    <main>
+
+      <!-- Todo Form -->
+      <section class="todo-form">
+        <input 
+          id="title" 
+          type="text" 
+          placeholder="Title" 
+          autocomplete="off"
+        >
+
+        <input 
+          id="description" 
+          type="text" 
+          placeholder="Description" 
+          autocomplete="off"
+        >
+
+        <button id="addButton">
+          Add Todo
+        </button>
+      </section>
+
+      <!-- Todo List -->
+      <section class="todo-list">
+        <h2>Your Tasks</h2>
+
+        <!-- Tasks will be added here dynamically -->
+        <ul id="todo-list" class="todos"></ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="/app.js"></script>
+</body>
+</html>
+

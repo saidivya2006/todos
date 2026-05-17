@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch TodoApp",
+      "request": "launch",
+      "mainClass": "org.pragna.todos.TodoApp",
+      "projectName": "todos",
+      "cwd": "${workspaceFolder}/todos",
+      "console": "integratedTerminal"
+    }
+  ]
+}
