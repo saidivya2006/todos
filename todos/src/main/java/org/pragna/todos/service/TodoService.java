@@ -36,13 +36,18 @@ public class TodoService {
             e.printStackTrace();
         }
     }
-
+    /* 
+        The addTodo method retrieves the current list of todos, adds the new todo to the list, and then saves the updated list back to the file. 
+    */
     public void addTodo(Todo todo) {
         List<Todo> todos = getAllTodos();
         todos.add(todo);
         saveTodos(todos);
     }
 
+    /*
+        The updateTodo method searches for the todo with the specified ID, updates it if found, and saves the updated list. 
+    */
     public void updateTodo(long id, Todo updatedTodo) {
         List<Todo> todos = getAllTodos();
         for (Todo todo : todos) {
@@ -55,12 +60,13 @@ public class TodoService {
         }
     }
 
+    /*
+    The deleteTodo method removes the todo with the specified ID from the list and saves the updated list. 
+    */
     public void deleteTodo(long id) {
         List<Todo> todos = getAllTodos();
        todos.removeIf(todo -> todo.getId() == id);
         saveTodos(todos);
-        
-       
     }
 }
 
